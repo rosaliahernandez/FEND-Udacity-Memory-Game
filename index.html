@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Matching Game</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Test Your Magic!</h1>
+        </header>
+
+        <!--This will add the clock, stars, and number of moves-->
+        <section class="score-panel">
+            <span class="clock">0:00</span>
+        	<ul class="stars">
+        		<li><i class="fa fa-star"></i></li>
+        		<li><i class="fa fa-star"></i></li>
+        		<li><i class="fa fa-star"></i></li>
+        	</ul>
+
+        	<span class="moves">0</span> Moves
+
+            <div class="restart">
+        		<i class="fa fa-repeat"></i>
+        	</div>
+        </section>
+
+        <!--Symbols for game, changed icons to match a "Harry Potter" theme, removed open and show-->
+        <ul class="deck">
+            <li class="card">
+                <i class="fa fa-magic"></i>
+            </li>
+            <li class="card">
+                <i class="fa fa-eye"></i>
+            </li>
+            <li class="card">
+                <i class="fas fa-quidditch"></i>
+            </li>
+            <li class="card">
+                <i class="fa fa-bolt"></i>
+            </li>
+            <li class="card">
+                <i class="fab fa-fort-awesome"></i>
+            </li>
+            <li class="card">
+                <i class="fas fa-quidditch"></i>
+            </li>
+            <li class="card">
+                <i class="fa fa-glasses"></i>
+            </li>
+            <li class="card">
+                <i class="fa fa-train"></i>
+            </li>
+            <li class="card">
+                <i class="fa fa-magic"></i>
+            </li>
+            <li class="card">
+                <i class="fa fa-envelope"></i>
+            </li>
+            <li class="card">
+                <i class="fa fa-glasses"></i>
+            </li>
+            <li class="card">
+                <i class="fa fa-envelope"></i>
+            </li>
+            <li class="card">
+                <i class="fa fa-bolt"></i>
+            </li>
+            <li class="card">
+                <i class="fa fa-train"></i>
+            </li>
+            <li class="card">
+                <i class="fa fa-eye"></i>
+            </li>
+            <li class="card">
+                <i class="fab fa-fort-awesome"></i>
+            </li>
+        </ul>
+    </div>
+    <!--This is the end of the game container-->
+
+<!---Modual that will popup once game is completed-->
+    <div class="modal_background hide">
+    <div class="modal_body">
+        <button class="modal_button modal_cancel">x</button>
+        <div class="modal_heading">
+            <h1>You Won! Play Again?</h1>
+        </div>
+        
+        <!-- modal stats-->
+        <div class="modal_stats">
+            <span class="modal_time"> Your time =</span>
+            <span class="modal_stars">Stars =</span>
+            <span class="modal_moves">Moves =</span>
+        </div>
+        <div class="modal_buttons">
+            <button class="modal_button modal_replay">Replay</button>
+            </div>
+    </div>
+</div> 
+<!-- end modal-->
+
+    <script src="js/app.js"></script>
+</body>
+</html>

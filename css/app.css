@@ -1,0 +1,207 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #ffffff url('https://d28hgpri8am2if.cloudfront.net/book_images/onix/interior_spreads/9781683833758/harry-potter-hogwarts-ruled-pocket-journal-9781683833758.in04.jpg'); /* Background from http://www.simonandschuster.com */
+    font-family: 'Coda', cursive;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    font-size: 2.5em;
+    color: #F1EAD7;
+    background-color: #5C3F31;
+    text-transform: uppercase;
+    display:inline-block;
+    padding:0.25em 0.5em ;
+    border-radius: 100px
+}
+
+/*
+ * Styles for the deck of cards
+ */
+
+.deck {
+    width: 660px;
+    min-height: 680px;
+    background: linear-gradient(160deg, #7f0909 0%, #ffc500 100%);
+    padding: 32px;
+    border-radius: 10px;
+    box-shadow: 12px 15px 20px 0 rgba(46, 61, 73, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 3em;
+}
+
+.deck .card {
+    height: 125px;
+    width: 125px;
+    background: #2e3d49;
+    font-size: 0;
+    color: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
+}
+
+.deck .card.open {
+    transform: rotateY(0);
+    background: #808080;
+    cursor: default;
+}
+
+.deck .card.show {
+    font-size: 33px;
+}
+
+.deck .card.match {
+    cursor: default;
+    background: #008000;
+    font-size: 33px;
+}
+
+/*
+ * Styles for the Score Panel
+ */
+
+.score-panel {
+    text-align: left;
+    width: 345px;
+    margin-bottom: 10px;
+    color: #F1EAD7;
+    background-color: #5C3F31;
+    display:inline-block;
+    padding:1em 3em ;
+    border-radius: 100px
+}
+
+.score-panel .stars {
+    margin: 0;
+    padding: 0px 20px ;
+    display: inline-block;
+    margin: 0 5px 0 0;
+}
+
+.score-panel .stars li {
+    list-style: none;
+    display: inline-block;
+}
+
+.score-panel .clock {
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+    color: #5C3F31;
+    width: 40px;
+    height: 20px;
+    background-color: #F1EAD7;
+}
+
+.score-panel .restart {
+    float: right;
+    cursor: pointer;
+}
+
+/*
+ * Styles for Modal Popup
+ */
+ .modal_background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 130%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.75); /* See through effect */
+    text-align: center;
+ }
+
+ .hide {
+    display: none;
+ }
+
+ .modal_body {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    height: 40%;
+    width: 500px;
+    transform: translate(-50%, -50%);
+ }
+ .modal_heading {
+    border-bottom: 1px solid #ffffff;
+}
+
+.modal_cancel {
+    background-color: #F1EAD7;
+    cursor: pointer;
+    border-radius: 4px;
+    padding: 2px;
+    margin: 10px;
+    float: right;
+}
+
+/* Changes the color of the modal's close button when hover */
+.modal_cancel:hover {
+    background-color: #5C3F31;
+    color: white;
+}
+
+.modal_stats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #ffffff;
+    color: #F1EAD7;
+
+}
+
+.modal_buttons {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+}
+
+.modal_button {
+    width: 60px;
+    height: 30px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #5C3F31;
+    color: #F1EAD7;
+    font-weight: bold;
+}
+.modal_button:hover {
+    background-color: #F1EAD7;
+    color: #5C3F31;
+}
